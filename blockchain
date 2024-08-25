@@ -1,0 +1,23 @@
+Create the Coinflip UI:
+import React, { useState } from 'react';
+
+function CoinFlipGame() {
+    const [betAmount, setBetAmount] = useState(0);
+    const [choice, setChoice] = useState(true);
+
+    const flipCoin = async () => {
+        // Connect to the smart contract and call the flipCoin function
+    };
+
+    return (
+        <div>
+            <h1>Coinflip Game</h1>
+            <input type="number" value={betAmount} onChange={(e) => setBetAmount(e.target.value)} />
+            <button onClick={() => setChoice(true)}>Heads</button>
+            <button onClick={() => setChoice(false)}>Tails</button>
+            <button onClick={flipCoin}>Flip Coin</button>
+        </div>
+    );
+}
+
+export default CoinFlipGame;
